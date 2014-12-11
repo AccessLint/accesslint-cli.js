@@ -1,15 +1,11 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-karma");
-
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
-    karma: {
-      unit: {
-        options: {
-          frameworks: ['jasmine'],
-          files: ["test/**/*.js"]
-        }
-      }
+    jasmine_node: {
+      all: ["spec/"]
     }
   });
+
+  grunt.loadNpmTasks('grunt-jasmine-node');
+  grunt.registerTask('default', ['jasmine_node']);
 };
