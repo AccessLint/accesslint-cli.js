@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/accesslint/access_lint-js/issues"
   },
-  "homepage": "https://github.com/accesslint/access_lint-js"
+  "homepage": "https://github.com/accesslint/access_lint-js",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-karma": "^0.9.0",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.28",
+    "karma-jasmine": "^0.3.2"
+  }
 }
