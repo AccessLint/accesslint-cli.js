@@ -1,0 +1,23 @@
+{
+  "name": "access_lint-js",
+  "version": "0.0.0",
+  "description": "PhantomJS link crawler and accessibility auditor",
+  "main": "crawler.js",
+  "scripts": {
+    "test": "grunt karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/accesslint/access_lint-js.git"
+  },
+  "keywords": [
+    "accessibility",
+    "crawler"
+  ],
+  "author": "See https://github.com/orgs/accesslint/people",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/accesslint/access_lint-js/issues"
+  },
+  "homepage": "https://github.com/accesslint/access_lint-js"
+}
