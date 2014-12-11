@@ -1,3 +1,4 @@
+"use strict";
 var Report = require("../lib/report");
 
 describe("Report", function() {
@@ -33,17 +34,17 @@ describe("Report", function() {
 
         expect(results).toEqual(
           [{
-            status: 'no elements result',
-            title: 'heading 1',
-            severity: 'quite severe',
+            status: "no elements result",
+            title: "heading 1",
+            severity: "quite severe",
             element_names: [],
             elements: undefined
           }, {
-            status: 'result with elements',
-            title: 'heading 2',
-            severity: 'not so severe!',
-            element_names: ['<a>ohai</a>'],
-            elements: [{ outerHTML: '<a>ohai</a>' }, null]
+            status: "result with elements",
+            title: "heading 2",
+            severity: "not so severe!",
+            element_names: ["<a>ohai</a>"],
+            elements: [{ outerHTML: "<a>ohai</a>" }, null]
           }]
         );
       });

@@ -6,6 +6,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-jasmine-node');
-  grunt.registerTask('default', ['jasmine_node']);
+  grunt.loadNpmTasks("grunt-jasmine-node");
+  grunt.registerTask("default", ["jasmine_node"]);
 };

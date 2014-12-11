@@ -1,0 +1,7 @@
+{
+  "globalstrict": true,
+  "predef": [
+    "require",
+    "describe"
+  ]
+}
