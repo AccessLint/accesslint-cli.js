@@ -4,8 +4,7 @@
   "description": "PhantomJS link crawler and accessibility auditor",
   "main": "crawler.js",
   "scripts": {
-    "test": "grunt",
-    "auditor": "./bin/auditor"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/accesslint/access_lint-js/issues"
+  },
+  "bin": {
+    "auditor": "./bin/auditor"
   },
   "homepage": "https://github.com/accesslint/access_lint-js",
   "devDependencies": {
