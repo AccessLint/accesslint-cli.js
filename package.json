@@ -1,6 +1,6 @@
 {
   "name": "access_lint-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PhantomJS link crawler and accessibility auditor",
   "main": "crawler.js",
   "scripts": {
