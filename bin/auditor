@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var system = require("system");
+var AuditorCli = require("../lib/auditor_cli");
+
+var auditorCli = new AuditorCli(system.args);
+auditorCli.run();
