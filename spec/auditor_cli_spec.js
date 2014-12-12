@@ -1,3 +1,5 @@
+"use strict";
+
 var AuditorCli = require("./../lib/auditor_cli"),
     MockAuditor = require("./support/mock_auditor"),
     MockReport = require("./support/mock_report");
@@ -36,7 +38,8 @@ describe("AuditorCli", function() {
 
       cli.run(MockAuditor);
 
-      expect(console.log).toHaveBeenCalledWith("Failed to load the page at failure_url.");
+      expect(console.log).
+        toHaveBeenCalledWith("Failed to load the page at failure_url.");
     });
   });
 });

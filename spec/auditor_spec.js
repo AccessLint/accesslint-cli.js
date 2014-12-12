@@ -1,3 +1,5 @@
+"use strict";
+
 var express = require("express"),
     Auditor = require("./../lib/auditor");
 
@@ -16,7 +18,7 @@ app.get("/errors", function(request, response){
   response.status(404).end();
 });
 
-appServer = app.listen();
+var appServer = app.listen();
 
 describe("Auditor", function() {
   describe("audit", function() {

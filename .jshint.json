@@ -1,7 +1,10 @@
 {
   "globalstrict": true,
   "predef": [
+    "axs",
+    "console",
+    "describe",
     "require",
-    "describe"
+    "spyOn"
   ]
 }
