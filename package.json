@@ -4,7 +4,7 @@
   "description": "PhantomJS link crawler and accessibility auditor",
   "main": "crawler.js",
   "scripts": {
-    "test": "grunt karma",
+    "test": "grunt",
     "auditor": "./bin/auditor"
   },
   "repository": {
