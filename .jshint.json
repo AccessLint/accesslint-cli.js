@@ -5,6 +5,7 @@
     "console",
     "describe",
     "require",
-    "spyOn"
+    "spyOn",
+    "__dirname"
   ]
 }
