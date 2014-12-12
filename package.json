@@ -1,7 +1,7 @@
 {
   "name": "access_lint-js",
   "version": "0.0.5",
-  "description": "PhantomJS link crawler and accessibility auditor",
+  "description": "PhantomJS accessibility auditor",
   "main": "crawler.js",
   "scripts": {
     "test": "grunt"
