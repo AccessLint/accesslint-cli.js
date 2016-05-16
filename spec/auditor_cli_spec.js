@@ -29,7 +29,7 @@ describe("AuditorCli", function() {
 
       cli.run(MockAuditor);
 
-      expect(console.log).toHaveBeenCalledWith("processed data");
+      expect(console.log).toHaveBeenCalledWith("'processed data'");
     });
 
     it("prints failure", function() {

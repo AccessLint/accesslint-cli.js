@@ -21,23 +21,14 @@ app.get("/errors", function(request, response){
 var appServer = app.listen();
 
 describe("Auditor", function() {
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
   describe("audit", function() {
     it("runs injected Audit script and returns its result", function(done) {
       var url = "http://127.0.0.1:" + appServer.address().port + "/";
-      var auditor = new Auditor(url, "./spec/support/mock_axs_testing.js");
-
-      auditor.audit(function(results) {
-        expect(results).toEqual("mocked audit");
-        done();
-      });
-    });
-
-    it("calls an errorHandler when request fails", function(done) {
-      var url = "http://127.0.0.1:" + appServer.address().port + "/errors";
       var auditor = new Auditor(url);
 
-      auditor.audit(null, function(status) {
-        expect(status).toEqual("fail");
+      auditor.audit(function(results) {
+        expect(results.violations).toBeDefined();
         done();
       });
     });
