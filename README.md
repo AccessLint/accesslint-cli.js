@@ -1,4 +1,4 @@
-# AccessLint-js
+# AccessLint CLI
 
 [![Circle
 CI](https://circleci.com/gh/accesslint/access_lint-js.svg?style=svg)](https://circleci.com/gh/accesslint/access_lint-js)
