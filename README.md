@@ -19,5 +19,5 @@ npm install -g accesslint-cli
 ## Usage
 
 ```
-accesslint http://my_url.com
+accesslint http://example.com
 ```
