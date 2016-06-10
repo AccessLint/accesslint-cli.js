@@ -10,7 +10,7 @@ describe("Report", function() {
 
         var results = report.process();
 
-        expect(results).toEqual([])
+        expect(results).toEqual([]);
       });
     });
 
