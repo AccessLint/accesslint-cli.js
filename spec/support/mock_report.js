@@ -5,7 +5,7 @@ function MockReport(data) {
 }
 
 MockReport.prototype.process = function() {
-  return "processed data";
+  return ["processed data"];
 };
 
 module.exports = MockReport;

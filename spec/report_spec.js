@@ -10,7 +10,7 @@ describe("Report", function() {
 
         var results = report.process();
 
-        expect(results).toEqual({ url: "http://example.com", warnings: [] });
+        expect(results).toEqual([])
       });
     });
 
@@ -18,13 +18,14 @@ describe("Report", function() {
       it("returns a flattened representation of the raw results", function() {
         var report = new Report(
             {
-              url: "http://example.com",
+              url: "http://example.com/",
               violations: [
               {
-                help: "lang",
+                help: "<html> element must have a valid lang attribute",
                 impact: "critical",
                 nodes: [
-                  { target: "" }
+                  { target: "html" },
+                  { target: "span > a" }
                 ]
               }
               ]
@@ -33,14 +34,9 @@ describe("Report", function() {
 
         var results = report.process();
 
-        expect(results).toEqual({
-          url: "http://example.com",
-          warnings: [{
-            description: "lang",
-            impact: "critical",
-            targets: [""]
-          }]
-        });
+        expect(results).toEqual([
+          "http://example.com/ | critical | <html> element must have a valid lang attribute | [\"html\", \"span > a\"]"
+        ]);
       });
     });
   });
