@@ -33,13 +33,14 @@ describe("AuditorCli", function() {
     });
 
     it("prints failure", function() {
-      spyOn(console, "log");
       var cli = new AuditorCli(["node", "some_script", "failure_url"]);
 
+      try {
       cli.run(MockAuditor);
-
-      expect(console.log).
-        toHaveBeenCalledWith("Failed to load the page at failure_url.");
+      } catch(error) {
+        expect(error.message).
+          toEqual("Failed to load the page at failure_url.");
+      }
     });
   });
 });
