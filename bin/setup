@@ -1,2 +1,10 @@
+#!/usr/bin/env sh
+
+set -e
+
 # Check npm is installed
 npm install
+
+if ! command -v grunt > /dev/null; then
+  npm install -g grunt-cli
+fi
