@@ -8,7 +8,7 @@ MockAuditor.prototype.audit = function(callback, errorHandler) {
   if(this.url === "success_url") {
     callback([]);
   } else {
-    errorHandler();
+    errorHandler(new Error("mock auditor error"));
   }
 };
 

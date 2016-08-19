@@ -32,15 +32,10 @@ describe("AuditorCli", function() {
       expect(console.log).toHaveBeenCalledWith("'processed data'");
     });
 
-    it("prints failure", function() {
+    it("does not throw an error", function() {
       var cli = new AuditorCli(["node", "some_script", "failure_url"]);
 
-      try {
-      cli.run(MockAuditor);
-      } catch(error) {
-        expect(error.message).
-          toEqual("Failed to load the page at failure_url.");
-      }
+      expect(function() { cli.run(MockAuditor); }).not.toThrow();
     });
   });
 });

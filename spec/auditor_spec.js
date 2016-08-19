@@ -5,6 +5,8 @@ var express = require("express"),
 
 var app = express();
 
+var ERROR = "Page error!";
+
 app.get("/", function(request, response){
   response.send(
     "<html>" +
@@ -15,7 +17,12 @@ app.get("/", function(request, response){
 });
 
 app.get("/errors", function(request, response){
-  response.status(404).end();
+  response.send(
+    "<html>" +
+      "<head><script>throw new Error('" + ERROR + "');</script></head>" +
+      "<body></body>" +
+    "</html>"
+  );
 });
 
 var appServer = app.listen();
@@ -29,6 +36,16 @@ describe("Auditor", function() {
 
       auditor.audit(function(results) {
         expect(results.violations).toBeDefined();
+        done();
+      }, function() {});
+    });
+
+    it("propagates JavaScript errors", function(done) {
+      var url = "http://127.0.0.1:" + appServer.address().port + "/errors";
+      var auditor = new Auditor(url);
+
+      auditor.audit(function() {}, function(err) {
+        expect(err).toMatch(ERROR);
         done();
       });
     });
