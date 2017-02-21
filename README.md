@@ -1,7 +1,8 @@
 # AccessLint CLI
 
-[![Circle
-CI](https://circleci.com/gh/accesslint/accesslint-cli.svg?style=svg)](https://circleci.com/gh/accesslint/accesslint-cli)
+**This project is no longer maintained. Check out [axe-cli], instead.**
+
+[axe-cli]: https://github.com/dequelabs/axe-cli
 
 Accesibility Testing package running accesslint.js via PhantomJS against your
 url.
