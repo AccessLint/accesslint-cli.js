@@ -32,7 +32,8 @@
     "jasmine-core": "^2.1.3"
   },
   "dependencies": {
-    "phantom": "^2.1.2",
+    "axe-puppeteer": "^1.0.0",
+    "puppeteer": "^1.17.0",
     "system": "^0.1.0"
   }
 }

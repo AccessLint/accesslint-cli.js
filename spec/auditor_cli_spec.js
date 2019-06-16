@@ -29,13 +29,7 @@ describe("AuditorCli", function() {
 
       cli.run(MockAuditor);
 
-      expect(console.log).toHaveBeenCalledWith("'processed data'");
-    });
-
-    it("does not throw an error", function() {
-      var cli = new AuditorCli(["node", "some_script", "failure_url"]);
-
-      expect(function() { cli.run(MockAuditor); }).not.toThrow();
+      expect(console.log).toHaveBeenCalledWith("\"processed data\"");
     });
   });
 });

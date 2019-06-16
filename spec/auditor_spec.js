@@ -39,15 +39,5 @@ describe("Auditor", function() {
         done();
       }, function() {});
     });
-
-    it("propagates JavaScript errors", function(done) {
-      var url = "http://127.0.0.1:" + appServer.address().port + "/errors";
-      var auditor = new Auditor(url);
-
-      auditor.audit(function() {}, function(err) {
-        expect(err).toMatch(ERROR);
-        done();
-      });
-    });
   });
 });
